@@ -45,6 +45,15 @@ const _parseRssItemsToWords = (items, stopWords) =>
     })
     .flat()
 
+/**
+ * Takes RSS-feed URL (and optional config), returns sorted list of word occurrences
+ * Example: [{ value: 'WORD_1', count: 14 }, { value: 'WORD_2', count: 9 }.. ]
+ * @param {{feedUrl: String, config: Object}} Obj
+ * @param {String} Obj.feedUrl RSS-feed URL
+ * @param {Object} Obj.config  Optional configuration of RSS parsing
+ * @async
+ * @returns Sorted list of word occurrences
+ */
 const getWordOccurrencesFromRss = async ({
   feedUrl,
   config = { wordCount: WORD_COUNT, stopWords: STOP_WORDS }
@@ -62,8 +71,7 @@ const getWordOccurrencesFromRss = async ({
 
   const wordOccurrences = _getWordOccurrences(wordList)
 
-  const willRes = _filterTopWords(wordOccurrences, wordCount)
-  return willRes
+  return _filterTopWords(wordOccurrences, wordCount)
 }
 
 module.exports = {
