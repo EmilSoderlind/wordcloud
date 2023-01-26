@@ -1,4 +1,4 @@
-# WORDCLOUD
+# RSS Wordcloud
 
 Web application that make it quick and easy to dynamically create a WORDCLOUD from any given RSS-feed link.
 
