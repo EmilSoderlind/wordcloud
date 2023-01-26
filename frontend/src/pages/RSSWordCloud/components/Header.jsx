@@ -5,7 +5,7 @@ const containerStyle = {
   borderColor: 'black',
   borderBottomStyle: 'solid',
   borderWidth: '1px',
-  textAlign: 'center'
+  textAlign: 'center',
 }
 
 export const Header = () => {

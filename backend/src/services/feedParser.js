@@ -8,5 +8,5 @@ const fetchRssFeed = async (feedUrl) => {
 }
 
 module.exports = {
-  fetchRssFeed
+  fetchRssFeed,
 }

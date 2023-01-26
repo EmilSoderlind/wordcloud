@@ -6,17 +6,13 @@ import { ButtonSection } from './ButtonSection'
 
 // TODO: Get copy from i18n or similar for multi-language support
 
-export const FormSection = ({
-  wordOccurences,
-  clearWordOccurences,
-  fetchWordOccurrences
-}) => {
+export const FormSection = ({ wordOccurences, clearWordOccurences, fetchWordOccurrences }) => {
   const {
     handleSubmit,
     register,
     formState: { errors },
     setError,
-    setValue
+    setValue,
   } = useForm()
 
   const submit = async ({ feedUrl }) => {
@@ -35,8 +31,7 @@ export const FormSection = ({
           errors={errors}
           {...register('feedUrl', {
             required: 'Enter RSS-feed link',
-            validate: (url) =>
-              isNotUrl(url) ? 'Invalid link format' : undefined
+            validate: (url) => (isNotUrl(url) ? 'Invalid link format' : undefined),
           })}
         />
         <ButtonSection

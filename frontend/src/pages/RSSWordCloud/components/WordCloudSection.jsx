@@ -9,30 +9,21 @@ const wrapperStyle = {
   borderWidth: '1px',
   margin: '8px',
   borderRadius: '8px',
-  backgroundColor: 'lightgrey'
+  backgroundColor: 'lightgrey',
 }
 
 const colorOptions = {
   luminosity: 'dark',
-  hue: 'blue'
+  hue: 'blue',
 }
 
 export const WordCloudSection = ({ wordOccurences }) => {
   return (
     <div style={wrapperStyle}>
       {wordOccurences ? (
-        <TagCloud
-          minSize={15}
-          maxSize={80}
-          tags={wordOccurences}
-          colorOptions={colorOptions}
-        />
+        <TagCloud minSize={15} maxSize={80} tags={wordOccurences} colorOptions={colorOptions} />
       ) : (
-        <img
-          src='/loading.png'
-          alt='Loading indicator'
-          style={{ width: '100%' }}
-        />
+        <img src='/loading.png' alt='Loading indicator' style={{ width: '100%' }} />
       )}
     </div>
   )

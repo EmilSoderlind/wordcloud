@@ -13,13 +13,11 @@ const _getWordOccurrences = (wordList) =>
     )?.count
 
     return [
-      ...accumulatedWordOccurrences.filter(
-        ({ value }) => value !== currentWord
-      ),
+      ...accumulatedWordOccurrences.filter(({ value }) => value !== currentWord),
       {
         value: currentWord,
-        count: currentWordCount ? currentWordCount + 1 : 1
-      }
+        count: currentWordCount ? currentWordCount + 1 : 1,
+      },
     ]
   }, [])
 
@@ -56,7 +54,7 @@ const _parseRssItemsToWords = (items, stopWords) =>
  */
 const getWordOccurrencesFromRss = async ({
   feedUrl,
-  config = { wordCount: WORD_COUNT, stopWords: STOP_WORDS }
+  config = { wordCount: WORD_COUNT, stopWords: STOP_WORDS },
 }) => {
   console.info(`Requesting word counts for ${feedUrl} RSS feed`)
 
@@ -77,5 +75,5 @@ const getWordOccurrencesFromRss = async ({
 module.exports = {
   getWordOccurrencesFromRss,
   _parseRssItemsToWords, // Export for testing purposes
-  _getWordOccurrences // Export for testing purposes
+  _getWordOccurrences, // Export for testing purposes
 }

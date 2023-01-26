@@ -426,7 +426,7 @@ const STOP_WORDS = [
   'skriver',
   'tog',
   'året',
-  '-'
+  '-',
 ]
 
 module.exports = { STOP_WORDS }

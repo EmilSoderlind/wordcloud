@@ -14,5 +14,5 @@ const wordOccurrencesFromRss = async (req, res, next) => {
 }
 
 module.exports = {
-  wordOccurrencesFromRss
+  wordOccurrencesFromRss,
 }

@@ -21,6 +21,6 @@ export const useWordOccurencesInRss = () => {
   return {
     wordOccurences,
     clearWordOccurences,
-    fetchWordOccurrences
+    fetchWordOccurrences,
   }
 }

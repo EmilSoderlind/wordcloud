@@ -8,8 +8,7 @@ import { useWordOccurencesInRss } from './hooks/useWordOccurencesInRss'
 const containerStyle = { overflow: 'hidden' }
 
 export const RSSWordCloud = () => {
-  const { wordOccurences, clearWordOccurences, fetchWordOccurrences } =
-    useWordOccurencesInRss()
+  const { wordOccurences, clearWordOccurences, fetchWordOccurrences } = useWordOccurencesInRss()
 
   return (
     <div style={containerStyle}>

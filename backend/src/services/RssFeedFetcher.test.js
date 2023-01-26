@@ -1,7 +1,4 @@
-const {
-  _parseRssItemsToWords,
-  _getWordOccurrences
-} = require('./RssFeedFetcher')
+const { _parseRssItemsToWords, _getWordOccurrences } = require('./RssFeedFetcher')
 
 const ITEM_TITLE_1 = 'EMIL vinner mElodifEstivAlen'
 const ITEM_CONTENT_1 =
@@ -19,8 +16,8 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
     const items = [
       {
         title: ITEM_TITLE_1,
-        content: ITEM_CONTENT_1
-      }
+        content: ITEM_CONTENT_1,
+      },
     ]
     const wordList = _parseRssItemsToWords(items, [])
     expect(wordList).toEqual([
@@ -42,7 +39,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
       'jag',
       'vore',
       'ett',
-      'dragspel'
+      'dragspel',
     ])
   })
 
@@ -50,20 +47,20 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
     const items = [
       {
         title: ITEM_TITLE_1,
-        content: ITEM_CONTENT_1
+        content: ITEM_CONTENT_1,
       },
       {
         title: ITEM_TITLE_1,
-        content: ITEM_CONTENT_1
+        content: ITEM_CONTENT_1,
       },
       {
         title: ITEM_TITLE_1,
-        content: ITEM_CONTENT_1
+        content: ITEM_CONTENT_1,
       },
       {
         title: ITEM_TITLE_1,
-        content: ITEM_CONTENT_1
-      }
+        content: ITEM_CONTENT_1,
+      },
     ]
     const wordList = _parseRssItemsToWords(items, [])
     expect(wordList).toEqual([
@@ -142,7 +139,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
       'jag',
       'vore',
       'ett',
-      'dragspel'
+      'dragspel',
     ])
   })
 
@@ -168,7 +165,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
       'ett',
       'dragspel',
       'emil',
-      'emil'
+      'emil',
     ]
 
     const wordOccurrenceList = _getWordOccurrences(wordList)
@@ -190,7 +187,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
       { value: 'vore', count: 1 },
       { value: 'ett', count: 1 },
       { value: 'dragspel', count: 1 },
-      { value: 'emil', count: 4 }
+      { value: 'emil', count: 4 },
     ])
   })
 })

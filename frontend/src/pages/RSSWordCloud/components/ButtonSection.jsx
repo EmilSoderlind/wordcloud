@@ -3,14 +3,10 @@ import { Button } from '../../../components/Button'
 const buttonWrapperStyle = {
   display: 'flex',
   justifyContent: 'space-around',
-  marginTop: '8px'
+  marginTop: '8px',
 }
 
-export const ButtonSection = ({
-  setValue,
-  wordOccurences,
-  clearWordOccurences
-}) => {
+export const ButtonSection = ({ setValue, wordOccurences, clearWordOccurences }) => {
   return (
     <div style={buttonWrapperStyle}>
       <Button

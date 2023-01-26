@@ -10,7 +10,7 @@ const containerStyle = {
   borderColor: 'black',
   borderTopStyle: 'solid',
   borderWidth: '1px',
-  textAlign: 'center'
+  textAlign: 'center',
 }
 
 export const Footer = () => {

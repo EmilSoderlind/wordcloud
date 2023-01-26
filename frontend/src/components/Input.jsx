@@ -5,7 +5,7 @@ const inputStyle = {
   margin: '8px 0',
   height: '16px',
   borderRadius: '8px',
-  backgroundColor: 'lightgrey'
+  backgroundColor: 'lightgrey',
 }
 
 const errorLabelStyle = { color: 'red', minHeight: '24px' }

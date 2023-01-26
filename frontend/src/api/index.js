@@ -1,11 +1,11 @@
 import axios from 'axios'
 import { API_TOKEN } from './auth'
 
-const BASEURL = 'http://192.168.1.4:3001'
+const BASEURL = 'http://localhost:3001'
 const headers = { authorization: API_TOKEN }
 
 const paths = {
-  wordOccurrences: '/wordOccurrences'
+  wordOccurrences: '/wordOccurrences',
 }
 
 export const getWordOccurrences = async ({ feedUrl, config }) => {
