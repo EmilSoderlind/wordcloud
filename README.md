@@ -1,6 +1,6 @@
-# WORDCLOUD
+# RSS Wordcloud
 
-Web application that make it quick and easy to dynamically create a WORDCLOUD from any given RSS-feed link.
+Web application that make it quick and easy to dynamically create a wordcloud from any given RSS-feed link.
 
 ## Quick overview
 
