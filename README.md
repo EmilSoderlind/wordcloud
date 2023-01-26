@@ -1,19 +1,34 @@
 # WORDCLOUD
 
-Web application that makes it quick and easy to dynamically create a WORDCLOUD from any given RSS-feed link.
+Web application that make it quick and easy to dynamically create a WORDCLOUD from any given RSS-feed link.
 
-## Get started
+## Quick overview
 
 To start the WORDCLOUD application one must run the frontend and the backend on the same machine.
 
-### Install and start backend
+### Backend
+
+Responsible for parsing provided RSS-feed URL and count word occurrences to be used in the wordcloud.
+
+#### Get started 🚀
 ```
 cd backend
 npm ci
 npm run start
 ```
 
-### Install and start frontend
+#### Run tests
+```
+cd backend
+npm ci
+npm run test
+```
+
+### Frontend
+
+User interface in which the user submits a valid RSS-feed URL, requests word occurrences from the backend and displays wordcloud.
+
+#### Get started 🚀
 ```
 cd frontend
 npm ci
