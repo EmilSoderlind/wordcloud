@@ -1,14 +1,14 @@
-const { _parseRssItemsToWords, _getWordOccurrences } = require('./RssFeedFetcher')
+const { parseRssItemsToWordListWithDuplicates } = require('./rssItemParser')
 
 const ITEM_TITLE_1 = 'EMIL vinner mElodifEstivAlen'
 const ITEM_CONTENT_1 =
   "Efter en riktig nagelbitare så vinner stjärnskottet Emil MelodifestivaleN med låten 'Om jag vore ett dragspel!'"
 
-// TODO: I'm sure we could implement a more covering test suit here! ;)
+// TODO: I'm sure we could implement a more covering test suit here! With more thought through names..  ;)
 
-describe('RSS feed fetcher should parse a RSS-feed properly', () => {
+describe('Parse a RSS-feed properly', () => {
   test('Empty list of RSS items returns empty word occurence', async () => {
-    const wordList = _parseRssItemsToWords([], [])
+    const wordList = parseRssItemsToWordListWithDuplicates([], [])
     expect(wordList).toEqual([])
   })
 
@@ -19,7 +19,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
         content: ITEM_CONTENT_1,
       },
     ]
-    const wordList = _parseRssItemsToWords(items, [])
+    const wordList = parseRssItemsToWordListWithDuplicates(items, [])
     expect(wordList).toEqual([
       'emil',
       'vinner',
@@ -62,7 +62,7 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
         content: ITEM_CONTENT_1,
       },
     ]
-    const wordList = _parseRssItemsToWords(items, [])
+    const wordList = parseRssItemsToWordListWithDuplicates(items, [])
     expect(wordList).toEqual([
       'emil',
       'vinner',
@@ -140,54 +140,6 @@ describe('RSS feed fetcher should parse a RSS-feed properly', () => {
       'vore',
       'ett',
       'dragspel',
-    ])
-  })
-
-  test('All words get counted in word-list', async () => {
-    const wordList = [
-      'emil',
-      'vinner',
-      'melodifestivalen',
-      'efter',
-      'en',
-      'riktig',
-      'nagelbitare',
-      'så',
-      'vinner',
-      'stjärnskottet',
-      'emil',
-      'melodifestivalen',
-      'med',
-      'låten',
-      'om',
-      'jag',
-      'vore',
-      'ett',
-      'dragspel',
-      'emil',
-      'emil',
-    ]
-
-    const wordOccurrenceList = _getWordOccurrences(wordList)
-    console.log('🚀 ~ test ~ wordOccurrenceList', wordOccurrenceList)
-
-    expect(wordOccurrenceList).toEqual([
-      { value: 'efter', count: 1 },
-      { value: 'en', count: 1 },
-      { value: 'riktig', count: 1 },
-      { value: 'nagelbitare', count: 1 },
-      { value: 'så', count: 1 },
-      { value: 'vinner', count: 2 },
-      { value: 'stjärnskottet', count: 1 },
-      { value: 'melodifestivalen', count: 2 },
-      { value: 'med', count: 1 },
-      { value: 'låten', count: 1 },
-      { value: 'om', count: 1 },
-      { value: 'jag', count: 1 },
-      { value: 'vore', count: 1 },
-      { value: 'ett', count: 1 },
-      { value: 'dragspel', count: 1 },
-      { value: 'emil', count: 4 },
     ])
   })
 })

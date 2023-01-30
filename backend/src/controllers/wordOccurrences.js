@@ -1,5 +1,5 @@
 const { API_TOKEN } = require('../configs/auth')
-const { getWordOccurrencesFromRss } = require('../services/RssFeedFetcher')
+const { getWordOccurrencesFromRss } = require('../services')
 
 const wordOccurrencesFromRss = async (req, res, next) => {
   const authToken = req.headers.authorization

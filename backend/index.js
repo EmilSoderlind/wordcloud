@@ -10,5 +10,5 @@ app.use(express.json())
 app.use('/wordOccurrences', wordOccurrencesRouter)
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port} 🚀`)
+  console.info(`Listening on port ${port} 🚀`)
 })
