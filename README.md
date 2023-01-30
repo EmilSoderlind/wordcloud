@@ -46,3 +46,10 @@ Open [localhost:3000](http://localhost:3000/) to start cloudify your RSS-feeds! 
 - Dagens Nyheter [https://www.dn.se/rss/](https://www.dn.se/rss/)
 - Svenska Kraftnät nyheter [https://www.svk.se/Api/RSSFeed/GetNewsByCategory/Allm%C3%A4nnanyheter](https://www.svk.se/Api/RSSFeed/GetNewsByCategory/Allm%C3%A4nnanyheter)
 - BBC News [http://feeds.bbci.co.uk/news/rss.xml](http://feeds.bbci.co.uk/news/rss.xml)
+
+
+## Screendumps
+
+![Screenshot 2023-01-30 at 21 42 15](https://user-images.githubusercontent.com/12121992/215591215-38789e3b-4983-41ff-a27e-51a89e2d0a8b.png)
+
+![Screenshot 2023-01-30 at 21 42 30](https://user-images.githubusercontent.com/12121992/215591246-6901383b-acbc-41e7-b33c-e11404a70204.png)
