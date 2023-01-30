@@ -10,23 +10,21 @@ export const BUTTON_SIZES = {
 }
 
 const generalStyle = {
-  borderRadius: '8px',
+  fontSize: '24px',
 }
 
-export const Button = ({ label, onClick, type, disabled, size = BUTTON_SIZES.BIG }) => {
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      style={{
-        ...generalStyle,
-        ...size,
-      }}
-      disabled={disabled}
-    >
-      {label}
-    </button>
-  )
-}
+export const Button = ({ label, onClick, type, disabled, size = BUTTON_SIZES.BIG }) => (
+  <button
+    type={type}
+    onClick={onClick}
+    style={{
+      ...generalStyle,
+      ...size,
+    }}
+    disabled={disabled}
+  >
+    {label}
+  </button>
+)
 
 // TODO: Use already existing component library or develop something ourselves

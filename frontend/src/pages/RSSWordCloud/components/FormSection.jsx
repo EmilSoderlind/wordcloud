@@ -4,6 +4,15 @@ import Input from '../../../components/Input'
 import { isNotUrl } from '../../../utils/helpers'
 import { ButtonSection } from './ButtonSection'
 
+const containerStyle = {
+  backgroundColor: '#ffffff',
+  padding: '8px',
+  margin: '8px',
+  boxShadow: '0 1px 2px 0 rgb(0 0 0 / 15%)',
+  borderTopStyle: 'solid',
+  borderColor: '#e02e3d',
+}
+
 // TODO: Get copy from i18n or similar for multi-language support
 
 export const FormSection = ({ wordOccurences, clearWordOccurences, fetchWordOccurrences }) => {
@@ -24,7 +33,7 @@ export const FormSection = ({ wordOccurences, clearWordOccurences, fetchWordOccu
   }
 
   return (
-    <div style={{ padding: '8px' }}>
+    <div style={containerStyle}>
       <form onSubmit={handleSubmit(submit)}>
         <Input
           label={'RSS-feed link'}

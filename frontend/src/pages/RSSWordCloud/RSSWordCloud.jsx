@@ -5,7 +5,8 @@ import { Header } from './components/Header'
 import { WordCloudSection } from './components/WordCloudSection'
 import { useWordOccurencesInRss } from './hooks/useWordOccurencesInRss'
 
-const containerStyle = { overflow: 'hidden' }
+// TODO: Remove inline styles and use styled-components or similar
+const containerStyle = { overflow: 'hidden', backgroundColor: '#ebebeb' }
 
 export const RSSWordCloud = () => {
   const { wordOccurences, clearWordOccurences, fetchWordOccurrences } = useWordOccurencesInRss()

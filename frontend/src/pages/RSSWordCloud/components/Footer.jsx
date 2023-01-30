@@ -3,13 +3,13 @@ const containerStyle = {
   bottom: 0,
   left: 0,
   right: 0,
-  backgroundColor: '#789ce5',
+  backgroundColor: '#ffffff',
   padding: '8px',
   display: 'flex',
   justifyContent: 'space-around',
-  borderColor: 'black',
+  borderColor: '#e02e3d',
   borderTopStyle: 'solid',
-  borderWidth: '1px',
+  borderWidth: '4px',
   textAlign: 'center',
 }
 
